@@ -71,7 +71,7 @@ class App extends React.Component {
   // Retrieve a seller (now using a product listing ID from message bus):
   retrieveSeller(id) {
     this.setState({loading: true});
-    console.log('%c REVIEWS ', this.styles,' fetching data for new listing ID')
+    console.log('%c REVIEWS ', this.styles,' fetching data for new listing ID...')
     axios
       .get(`http://regretsyreviews-env.5sjqpmny7c.us-east-2.elasticbeanstalk.com/reviews/sellers/product/${id}`)
       // .get(`/reviews/sellers/product/${id}`)
@@ -113,7 +113,7 @@ class App extends React.Component {
           currentReviews        : reviews,
           loading               : false
         });
-        console.log('%c REVIEWS ', this.styles,` rendering for listing ID ${this.state.currentProductID}...`);
+        console.log('%c REVIEWS ', this.styles,` rendering for listing ID ${this.state.currentProductID}`);
       })
       .catch( err => console.log(`Error retrieving seller info for id ${id}:\n${err}`) );
   }
@@ -135,6 +135,10 @@ class App extends React.Component {
 
         let randomId = ids[Math.floor(Math.random() * (101 - 1)) + 1]
         this.retrieveSeller(randomId);
+        
+        // Broadcast the randomly selected listing ID to the channel:
+        this.reviewChannel.postMessage(randomId);
+        console.log('%c REVIEWS ', this.styles, ` broadcasting randomly generated listing ID: ${randomId}`);
       })
       .catch( err => console.log(`Error retrieving listing IDs from DB ${err}`));
   }
