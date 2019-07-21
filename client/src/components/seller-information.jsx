@@ -1,5 +1,4 @@
 import React           from "react";
-import Container       from 'react-bootstrap/Container'
 import Row             from 'react-bootstrap/Row';
 import Col             from 'react-bootstrap/Col';
 import Rating          from 'react-rating';
@@ -26,8 +25,10 @@ const SellerFooterInfo = (props) => {
 
   return (
     <Row>
-      <Col md={{span:1}}>
-        <img className="reviewsSellerAvatar" src={props.currentSellerAvatar} alt="avatar"/>
+      <Col md={1}>
+        <Row>
+          <img className="reviewsSellerAvatar" src={props.currentSellerAvatar} alt="avatar"/>
+        </Row>
       </Col>
       <Col>
         <div className="reviewsSellerInfoBlock">

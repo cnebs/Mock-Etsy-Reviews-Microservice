@@ -17,10 +17,12 @@ app.use(cors());
 app.use(compression());
 app.use('/', express.static('./client/dist'));
 
+
 // database seeding functions:
 // // db.seedDB(data);
 // // db.seedDBListingID(listData.sellerData);
 // // db.seedDBProductInfo(listData.itemIDandPhotoforCharles);
+
 
 // Testing routes
 app.get('/reviews/tests/datagen', (req, res) => {res.send(fakeData.dataGen());}) // data generator
@@ -37,7 +39,7 @@ app.get('/reviews/sellers/product/:id', (req, res) => {
 })
 
 
-// Get seller IDs from database
+// Get seller IDs from database (For random ID generation if no message bus data)
 app.get('/reviews/sellers', (req, res) => {
   db.retrieveSellerIds( (err, results) => {
     if (err) console.log(err, ' in server\n');
@@ -50,5 +52,6 @@ app.listen(port, host, () =>
 -------------------------------------------\n
 |         Regretsy Reviews Server         |\n
 |    Eavesdropping on ${host} at ${port}     |\n
--------------------------------------------`)
+-------------------------------------------
+`)
 });

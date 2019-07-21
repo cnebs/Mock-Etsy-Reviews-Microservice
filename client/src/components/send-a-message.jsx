@@ -13,7 +13,7 @@ const SendAMessage = (props) => {
             <img className="reviewAvatar"src={props.sellerAvatar} alt="Seller Avatar"/>
           </Row>
         </Col>
-        <Col md={11}>
+        <Col className="reviewsSendAMessageTextContainer"md={11}>
           <Row>
             <span className="reviewsSendAMessageLineOne">
               <span className="reviewsSendAMessageHaveAQuestion">Have a question about the item?</span>

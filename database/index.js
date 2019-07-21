@@ -124,7 +124,7 @@ connection.connect();
 
 /*
 
-// // *** FOR DOCKER RE-SEEDING ***
+// // *** FOR RDS RE-SEEDING ***
 // // If uncommented, will reset the contents of the database on save
 
 // connection.query(`DROP TABLE IF EXISTS reviews, sellers;`);
@@ -155,7 +155,8 @@ connection.connect();
 //         REFERENCES sellers(sellerID)
 //   );
 // `);
-^ FOR DOCKER RE-SEEDING^
+// // ^ FOR RDS RE-SEEDING^
+
 */
 
 

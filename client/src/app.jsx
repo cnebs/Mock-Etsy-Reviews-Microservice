@@ -225,8 +225,8 @@ class App extends React.Component {
           <Col>
               { // javascript
                 this.state.moreClicked === true ?
+                
                   this.state.readAllClicked === true ? 
-
                   <span /> : 
 
                     <Button 
