@@ -23,10 +23,53 @@
   background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(255, 255, 255));
 }
 
+.reviewsSendAMessageContainer {
+  padding-top: 46px;
+  padding-bottom: 24px;
+}
+
+.reviewsSendAMessageLineOne {
+  padding-top: 4px;
+}
+.reviewsSendAMessageHaveAQuestion {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+}
+
+.reviewsSendAMessageButton {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  padding-left: 3px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.reviewsSendAMessageButton:hover {
+  color: #575757;
+  cursor: pointer;
+}
+
+.reviewsSendAMessageLineTwo {
+  padding-top: 4px;
+}
+
+.reviewsSendAMessageSellerUsuallyResponds {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+}
+
+.reviewsSendAMessageWithin {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 4.5px;
+}
+
 .reviewsHeader {
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
   font-size: 17px;
+  padding-top: 10px;
 }
 
 .totalReviews {
@@ -197,41 +240,4 @@
 
 .reviewsSellerInfoFooter {
   padding-top: 20px;
-}
-
-.reviewsMeetTheOwnerHeader {
-
-}
-
-  .reviewsMeetTheOwnerOfText {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 500;
-    font-size: 17px;
-    color: #222
-  }
-
-  .reviewsMeetTheOwnerOfUsername {
-    padding-left: 4px;
-    padding-bottom: 7px;
-    font-family: 'Rubik', sans-serif;
-    text-decoration: underline;
-    font-size: 17px;
-    color: #222;
-  }
-
-  .reviewsMeetTheOwnerOfAvatar {
-    padding-bottom: 3px;
-    border-radius: 50%;
-    height: 75px;
-    width: 75px;
-  }
-
-  .reviewsMeetTheOwnerOfName {
-    font-family: 'Rubik', sans-serif;
-    font-size: 14px;
-    color: #595959;
-  }
-
-.reviewsMeetTheOwnerFooter {
-
 }

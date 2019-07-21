@@ -6,8 +6,9 @@ import Col              from 'react-bootstrap/Col';
 import Average          from "./components/average-rating.jsx";
 import Button           from "react-bootstrap/Button";
 import Spinner          from 'react-bootstrap/Spinner';
-import MasterReviewList from "./components/master-review-list.jsx"
-import SellerFooterInfo from "./components/seller-information.jsx"
+import SendAMessage     from './components/send-a-message.jsx';
+import MasterReviewList from "./components/master-review-list.jsx";
+import SellerFooterInfo from "./components/seller-information.jsx";
 // import ReviewerPhotos   from "./components/reviewer-photos.jsx";
 
 class App extends React.Component {
@@ -35,12 +36,14 @@ class App extends React.Component {
                              ]
     };
 
-    // broadcast channel:
-    this.reviewChannel = new BroadcastChannel('regretfully');
+    // broadcast channels:
+    this.reviewChannel      = new BroadcastChannel('regretfully');
+    this.sendMessageChannel = new BroadcastChannel('message-seller');
     
     // binds:
     this.retrieveSeller            = this.retrieveSeller.bind(this);
     this.handleMoreClick           = this.handleMoreClick.bind(this);
+    this.handleSendAMessageClick   = this.handleSendAMessageClick.bind(this);
     this.handleReadAllReviewsClick = this.handleReadAllReviewsClick.bind(this);
 
     // styling used in console-logs:
@@ -57,6 +60,11 @@ class App extends React.Component {
     ].join(';');
   }
 
+  // Handle clicking [ send a message ] by broadcasting data for
+  // item-details microservice to do things in response to
+  handleSendAMessageClick() {
+    this.sendMessageChannel.postMessage('send a message clicked!')
+  }
 
   // Handle clicking [ More + ] button:
   handleMoreClick() {
@@ -156,8 +164,21 @@ class App extends React.Component {
     return (
       <Container>
 
+        {/* Send A Message Reviews Header Component */}
+        <Col>
+          <Row>
+            <SendAMessage 
+            handleSendAMessageClick={this.handleSendAMessageClick}
+            sellerAvatar={this.state.currentSellerAvatar}
+            />
+          </Row>
+        </Col>
+
+        <hr />
+
         {/* Reviews Header & Average Star Ratings */}
         <Col>
+        <Row>
           <span className='reviewsHeader'>Reviews 
             <span className='averageStars'>
               <Average
@@ -166,6 +187,7 @@ class App extends React.Component {
               />
             </span>
           </span>
+        </Row>
         </Col>
 
 

@@ -9,10 +9,12 @@ const reviewBuilder = (data) => {
   return (
     <Container>
       <Row>
-        <Col md={{span: 1}}>
+        <Col md={1}>
+          <Row>
             <img className='reviewAvatar' src={typeof data.avatar === 'undefined' ? "https://www.etsy.com/images/avatars/default_avatar_75x75.png" : data.avatar}></img>
+          </Row>
         </Col>
-        <Col>
+        <Col md={11}>
           <Row>
             <span className='reviewName'>{data.name}</span>  
             <span className='reviewDate'>{` ${dateConverter(data.date)}`}</span>
