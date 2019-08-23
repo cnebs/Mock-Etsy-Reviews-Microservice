@@ -1,4 +1,4 @@
-# RegrEtsy Reviews
+# Mock-Etsy Reviews Micro-service
 
 > Implemented a reviews microservice for an Etsy item detail mock. Packaged with other microservices to approximate a functional item detail page.
 
