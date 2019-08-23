@@ -6,10 +6,10 @@
 
 ## Related Projects
 
-  - https://github.com/regretsy-hratx42/header-and-search
-  - https://github.com/regretsy-hratx42/image-carousel
-  - https://github.com/regretsy-hratx42/cnebs-reviews
-  - https://github.com/regretsy-hratx42/item-details
+  - https://github.com/mock-etsy/header-and-search
+  - https://github.com/mock-etsy/image-carousel
+  - https://github.com/mock-etsy/cnebs-reviews
+  - https://github.com/mock-etsy/item-details
   
   A preview of the microservices stitched together:
   
