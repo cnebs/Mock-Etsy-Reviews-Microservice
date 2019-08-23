@@ -42,7 +42,7 @@ This microservice uses React, Node, MySQL, knex.js, and Express for the majority
 
 It was constructed to use 100 unique seller records, with 100 reviews for each seller.
 
-The microservices communicate via message bus across the reverse proxy; data renders relative to the product id.
+The microservices communicate via broadcast channel message-bus across the reverse proxy; data renders relative to the product id.
 
 React-Bootstrap is the front-end framework used across microservices in this project.
 
